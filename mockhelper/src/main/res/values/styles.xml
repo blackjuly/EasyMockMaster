@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Develop" />
+
+    <style name="Develop.Widget" />
+
+    <style name="Develop.Widget.DeviceInfoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FF333333</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:ems">10</item>
+    </style>
+    <!--横线样式-->
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line_light_grey</item>
+    </style>
+    <!--竖线样式-->
+    <style name="vertical_line">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_light_grey</item>
+    </style>
+
+    <style name="dialog_style">
+        <item name="android:background">@drawable/lib_base_bg_corners4_white</item>
+        <item name="android:minHeight">156dp</item>
+    </style>
+
+    <!--基本文本style-->
+    <style name="ehi_base_tv">
+        <item name="android:textSize">@dimen/dialog_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="dialog_base_tv" parent="ehi_base_tv" />
+
+    <!--弹窗按钮样式 去除阴影-->
+    <style name="dialog_btn" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ppw_dialog_btn_height</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/lib_base_bg_corners4_white</item>
+        <item name="android:textSize">@dimen/dialog_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!--弹窗中间文本样式-->
+    <style name="dialog_tv_text_content" parent="dialog_base_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/ppw_tv_content_margin</item>
+        <item name="android:layout_marginRight">@dimen/ppw_tv_content_margin</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:gravity">center|top</item>
+    </style>
+
+    <style name="tv_title_bar_center_text" parent="dialog_base_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--公共模块 蓝色按钮-->
+    <style name="common_btn_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/lib_base_selector_blue</item>
+        <item name="android:textColor">@color/gray_white_bg</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="ll_item_stop_over_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:background">@color/ehi_ll_item_default_bg_color</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tv_stop_over_label" parent="dialog_base_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--GenericDialog 动画, 从底部飞入效果-->
+    <style name="TranslationVertical" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/lib_base_translation_vertical_b2t</item>
+        <item name="android:windowExitAnimation">@anim/lib_base_translation_vertical_t2b</item>
+    </style>
+
+    <!--基础Style库-->
+    <style name="EhiBase" />
+
+    <style name="EhiBase.Widget" />
+    <!--labelContentView的Style-->
+    <style name="EhiBase.Widget.LabelContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <!--标题-->
+        <item name="titleSize">14dp</item>
+        <item name="titleColor">@color/color_gray_100</item>
+        <item name="titleMarginContent">11dp</item>
+        <item name="titleHolderCount">6</item>
+        <!--内容-->
+        <item name="contentSize">14dp</item>
+        <item name="contentColor">@color/color_gray_100</item>
+        <item name="contentHintColor">@color/color_gray_350</item>
+    </style>
+    <!--LabelContentView 只读文本-->
+    <style name="EhiBase.Widget.LabelContent.OnlyRead">
+        <item name="contentEditable">false</item>
+    </style>
+    <!--labelContentView 只读文本 & 无编辑背景框 & 有右侧箭头-->
+    <style name="EhiBase.Widget.LabelContent.OnlyRead.ShowArrow">
+        <item name="rightUnitImageSrc">@drawable/lib_base_icon_arrow_right_gray</item>
+        <item name="contentFillExtraSpace">true</item>
+    </style>
+    <!--labelContentView的可编辑的默认样式基础父类-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel">
+        <item name="contentBackground">@drawable/lib_base_bg_corners4_gray450</item>
+        <item name="contentEditable">true</item>
+        <item name="contentPaddingLeft">13dp</item>
+        <item name="contentPaddingTop">8dp</item>
+        <item name="contentPaddingRight">33dp</item>
+        <item name="contentPaddingBottom">8dp</item>
+    </style>
+    <!--labelContentView的普通可编辑的文本-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel.NormalText" />
+    <!--labelContentView的普通可编辑的文本 只读模式-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel.NormalText.OnlyRead">
+        <item name="contentEditable">false</item>
+    </style>
+    <!--labelContentView的普通可编辑的文本 只读模式 背景变色-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel.NormalText.OnlyRead.WhiteBg">
+        <item name="contentEditable">false</item>
+        <item name="contentBackground">@drawable/lib_base_bg_corners4_white</item>
+    </style>
+    <!--labelContentView的普通可编辑的文本 只读模式 背景变色 显示箭头-->
+    <!--labelContentView的普通可编辑的文本 可编辑的显示箭头-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel.NormalText.ShowArrow">
+        <item name="rightUnitImageSrc">@drawable/lib_base_icon_arrow_right_gray</item>
+        <item name="contentFillExtraSpace">true</item>
+    </style>
+    <!--labelContentView的金额样式可编辑的文本-->
+    <style name="EhiBase.Widget.LabelContent.EditLabel.ChargeText">
+        <item name="titleHolderCount">4</item>
+        <item name="contentInputType">decimals</item>
+        <item name="contentHint">0</item>
+        <item name="contentHintColor">@color/color_gray_100</item>
+        <item name="contentMaxLength">10</item>
+        <item name="contentWidth">115dp</item>
+        <!--单位-->
+        <item name="rightUnitColor">@color/color_gray_100</item>
+        <item name="rightUnitMarginContent">8dp</item>
+        <item name="rightUnitText">元</item>
+    </style>
+</resources>

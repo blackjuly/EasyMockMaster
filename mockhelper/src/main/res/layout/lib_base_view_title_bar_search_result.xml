@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_list_menu_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lib_base_bg_corners6_gray510"
+        android:gravity="center_vertical|start"
+        android:minHeight="44dp"
+        android:paddingStart="25dp"
+        android:paddingLeft="25dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:textColor="@color/color_gray_100"
+        android:textSize="15dp"
+        tools:text="TitleBar 搜索返回" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_light_grey" />
+
+</LinearLayout>

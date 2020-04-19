@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar_search_content"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/lib_base_bg_corners6_gray510"
+    android:minHeight="44dp"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingEnd="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="0dp"
+    android:paddingStart="10dp"
+    android:paddingTop="8dp">
+
+    <cn.whdreamblog.mockhelper.widget.MockAutoCompleteTextView
+        android:id="@+id/ac_tv_search_box"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/lib_base_bg_corners4_white"
+        android:completionThreshold="1"
+        android:drawableLeft="@drawable/lib_base_icon_search_gray"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/lib_base_icon_search_gray"
+        android:dropDownHorizontalOffset="-20dp"
+        android:dropDownVerticalOffset="8dp"
+        android:dropDownWidth="match_parent"
+        android:gravity="center_vertical"
+        android:hint="搜索"
+        android:inputType="text"
+        android:paddingEnd="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/grey"
+        android:textSize="12dp" />
+
+    <cn.whdreamblog.mockhelper.widget.AutoAlignTextView
+        android:id="@+id/tv_cancel_btn"
+        android:layout_width="58dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:shadowRadius="@null"
+        android:text="取消"
+        android:textColor="@color/light_blue"
+        android:textSize="12dp" />
+</LinearLayout>

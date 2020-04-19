@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="44dp">
+
+    <include layout="@layout/lib_base_view_title_bar_normal_content" />
+
+    <include
+        layout="@layout/lib_base_view_title_bar_search_content"
+        android:visibility="gone" />
+
+</FrameLayout>

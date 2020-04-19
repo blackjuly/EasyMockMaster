@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent3">@color/color_orange_0</color>
+    <!--Color Gray-->
+    <color name="color_gray_0">#FF000000</color>
+    <color name="color_gray_100">#FF333333</color>
+    <color name="color_gray_200">#FF7B7B7B</color>
+    <color name="color_gray_300">#FF9C9C9C</color>
+    <color name="color_gray_350">#FF999999</color>
+    <color name="color_gray_360">#FFACACAC</color>
+    <color name="color_gray_400">#FFD4D4D4</color>
+    <color name="color_gray_415">#FFE5E5E5</color>
+    <color name="color_gray_450">#FFEEEEEE</color>
+    <color name="color_gray_500">#FFF1F1F1</color>
+    <color name="color_gray_510">#FFF7F7F7</color>
+    <color name="color_gray_520">#FFF8F8F8</color>
+    <color name="color_gray_530">#FFFFF5D5</color>
+    <color name="color_gray_600">#FFFFFFFF</color>
+
+    <!--Color Orange-->
+    <color name="color_orange_0">#FFFF7E00</color>
+
+
+    <!--Color Red-->
+    <color name="color_red_0">#FFFF3530</color>
+
+    <!--Color Blue-->
+    <color name="color_blue_0">#FF00A0E9</color>
+    <color name="color_blue_100">#FF4AADFA</color>
+
+    <!-- ################################# 需要移动到上层 ################################### -->
+
+    <!--用作订单header底色-->
+    <!--用作订单字体颜色-->
+    <!--灰色字体统一用这个黑色-->
+    <color name="grey">#b6b6b6</color>
+    <!--字体统一用这个黑色-->
+    <color name="black">#FF333333</color>
+    <!-- 灰白色背景 -->
+    <color name="gray_white_bg">#FFF7F7F7</color>
+    <color name="ehi_ui_light_gray_v1">#eaeaea</color>
+    <!--UI二次改版使用-->
+    <color name="ehi_ui_light_grey">#F1F1F1</color>
+    <!--搜索框背景-->
+    <color name="white">#FFFFFF</color>
+    <color name="ehi_ui_gray_v3">#FF7B7B7B</color>
+    <color name="ehi_ui_gray_v5">#FFD2D2D2</color>
+    <!--分割线颜色-->
+    <color name="line_light_grey">#d4d4d4</color>
+    <color name="line_light_grey_v2">#FFD2D2D2</color>
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#77000000</color>
+    <!--上下车里程数等宽屏按钮-->
+    <color name="light_blue">#0075c2</color>
+    <color name="blue">#718de0</color>
+    <color name="ehi_ui_blue_v2">#4AADFA</color>
+    <color name="ehi_ui_blue_v3">#FF4AADFA</color>
+    <color name="ehi_ui_orange">#FFFF7E00</color>
+    <color name="ehi_ui_orange_10">#FFFF8335</color>
+    <color name="grab_orange">@color/ehi_ui_orange</color>
+    <color name="ehi_ui_black_v2">#333333</color>
+    <color name="ehi_btn_confirm_default_color">@color/ehi_ui_orange</color>
+    <color name="ehi_text_default_color">@color/black</color>
+    <color name="ehi_hint_default_color">@color/grey</color>
+    <color name="ehi_bg_default_color">@color/gray_white_bg</color>
+    <color name="ehi_btn_plus_text_color">@color/grey</color>
+    <color name="ehi_btn_plus_bg_color">@color/ehi_ui_light_gray_v1</color>
+    <color name="ehi_ll_item_default_bg_color">@color/white</color>
+    <color name="ehi_tab_default_bg_color">@color/white</color><!--类似订单详情的tab背景-->
+    <!--类似订单详情的tab背景-->
+    <color name="ehi_draw_board_default_bg_color">@color/white</color><!--画板的背景颜色-->
+    <color name="ehi_rg_default_bg_color">@color/white</color><!--RadioGroup默认背景颜色-->
+
+
+    <!--城市列表-->
+    <color name="common_list_empty_layout">#F1F1F1</color>
+    <color name="common_wheel_view_text">@color/grey</color>
+    <color name="common_wheel_view_dialog_btn_confirm">@color/ehi_ui_orange</color>
+    <color name="ehi_top_tab_default_bg">@color/ehi_ui_blue_v2</color>
+    <color name="ehi_left_title_bar_text_color">#FFFFC900</color>
+
+
+    <!-- ################################# 需要移动到上层 ################################### -->
+
+</resources>

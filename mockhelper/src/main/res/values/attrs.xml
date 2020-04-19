@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义画板类view-->
+    <declare-styleable name="EhiDrawingBoard">
+        <attr name="stroke_width" format="integer" />
+        <attr name="paint_color" format="color" />
+        <attr name="canvas_color" format="color|reference" />
+        <attr name="anti_alias" format="boolean" />
+    </declare-styleable>
+    <!--自定义标题栏-->
+    <declare-styleable name="MockTitleBar">
+        <attr name="titleName" format="string" />
+        <attr name="leftDrawable" format="reference" />
+        <attr name="leftBtnIsVisibility" format="boolean" />
+        <attr name="rightBtnIsVisibility" format="boolean" />
+        <attr name="bottomLineVisibility" format="boolean" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="rightText" format="string" />
+        <attr name="isSearchView" format="boolean" />
+        <attr name="searchViewHint" format="string" />
+        <attr name="titleBackground" format="color|reference" />
+        <attr name="bottomCutLineVisibility" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义标题栏-->
+    <declare-styleable name="EhiTitleOnLeftBar">
+        <attr name="barFirstTitleText" format="string"/>
+        <attr name="barSecondTitleText" format="string"/>
+        <attr name="barThirdTitleText" format="string"/>
+        <attr name="barFirstMenuIcon" format="reference"/>
+        <attr name="barSecondMenuIcon" format="reference"/>
+    </declare-styleable>
+    
+    <!--自定义侧边栏 -->
+    <declare-styleable name="EhiSlideBar">
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="chooseTextColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="chooseBackgroundColor" format="color" />
+        <attr name="selectedStyle">
+            <enum name="default_" value="0" />
+            <enum name="none" value="1" />
+            <enum name="circle" value="2" />
+            <enum name="stretch" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="WheelView">
+        <attr name="itemVisibleNum" format="integer" />
+        <attr name="textColorOuter" format="color" />
+        <attr name="textSizeOuter" format="dimension" />
+        <attr name="textColorCenter" format="color" />
+        <attr name="textSizeCenter" format="dimension" />
+        <attr name="textStyleCenter" format="enum">
+            <enum name="Default" value="0" />
+            <enum name="Bold" value="1" />
+        </attr>
+        <attr name="lineColor" format="color" />
+        <attr name="isLoop" format="boolean" />
+        <attr name="lineSpaceingDimens" format="dimension" />
+        <attr name="wheelGravity" format="enum">
+            <enum name="left" value="234" />
+            <enum name="center" value="354" />
+            <enum name="right" value="894" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="EHiWidgetRelativeSizeTextView">
+        <!--开头和结束的文本-->
+        <attr name="ehai_ui_relativesize_textview_start_text" format="string" />
+        <attr name="ehai_ui_relativesize_textview_end_text" format="string" />
+        <!--统一设置开头和结束的tag的比例-->
+        <attr name="ehai_ui_relativesize_textview_proportion" format="float" />
+        <!--开头的文本的比例-->
+        <attr name="ehai_ui_relativesize_textview_start_proportion" format="float" />
+        <!--结束的文本的比例-->
+        <attr name="ehai_ui_relativesize_textview_end_proportion" format="float" />
+        <!--开始文本和结束文本的颜色-->
+        <attr name="ehai_ui_relativesize_textview_start_end_text_color" format="color" />
+        <attr name="ehai_ui_relativesize_textview_start_text_color" format="color" />
+        <attr name="ehai_ui_relativesize_textview_end_text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EhiItemWithArrow">
+        <!--标题-->
+        <attr name="ehi_ui_item_title_text" format="string" />
+        <attr name="ehi_ui_item_title_text_size" format="dimension" />
+        <attr name="ehi_ui_item_title_text_color" format="color|reference" />
+        <!--内容-->
+        <attr name="ehi_ui_item_context_text" format="string" />
+        <attr name="ehi_ui_item_context_text_size" format="dimension" />
+        <attr name="ehi_ui_item_context_text_color" format="color|reference" />
+        <attr name="ehi_ui_item_context_editable" format="boolean" />
+        <attr name="ehi_ui_item_top_line_visibility" format="boolean" />
+        <attr name="ehi_ui_item_bottom_line_visibility" format="boolean" />
+        <attr name="ehi_ui_item_show_arrow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomView">
+        <attr name="matchHeightToWidth" format="boolean" />
+        <attr name="matchWidthToHeight" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="EhiRoundCornerTextView">
+        <attr name="roundCornerBackground" format="color|reference" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+    </declare-styleable>
+
+    <!--表单封装条目-->
+    <declare-styleable name="LabelContentView">
+        <attr name="consumeTouchEvent" format="boolean" />
+        <!--左边标题-->
+        <attr name="titleColor" format="color|reference" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleText" format="string" />
+        <attr name="titleHolderCount" format="integer" />
+        <attr name="titleTextGravity" format="string">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="rightTop" value="2" />
+        </attr>
+        <attr name="titleStyle" format="string">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+        </attr>
+        <attr name="titleFillExtraSpace" format="boolean" />
+        <attr name="titleMarginContent" format="dimension" />
+        <attr name="titlePaddingTop" format="dimension" />
+        <!--左部单位-->
+        <attr name="leftUnitColor" format="color|reference" />
+        <attr name="leftUnitSize" format="dimension" />
+        <attr name="leftUnitText" format="string" />
+        <attr name="leftUnitImageSrc" format="reference" />
+        <attr name="leftUnitMarginContent" format="dimension" />
+        <attr name="leftUnitTextStyle" format="string">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+        </attr>
+        <!--中间的内容-->
+        <attr name="contentColor" format="color|reference" />
+        <attr name="contentHintColor" format="color|reference" />
+        <attr name="contentBackground" format="reference|string">
+            <enum name="editTextDefault" value="-2" />
+            <enum name="noBackground" value="-1" />
+        </attr>
+        <attr name="contentEditable" format="boolean" />
+        <attr name="contentSize" format="dimension" />
+        <attr name="contentText" format="string" />
+        <attr name="contentHint" format="string" />
+        <attr name="contentWidth" format="dimension" />
+        <attr name="contentFillExtraSpace" format="boolean" />
+        <attr name="contentPaddingLeft" format="dimension" />
+        <attr name="contentPaddingTop" format="dimension" />
+        <attr name="contentPaddingRight" format="dimension" />
+        <attr name="contentPaddingBottom" format="dimension" />
+        <attr name="contentInputType" format="string">
+            <enum name="text" value="0" />
+            <enum name="number" value="1" />
+            <enum name="decimals" value="2" />
+        </attr>
+        <attr name="contentTextStyle" format="string">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+        </attr>
+        <attr name="contentMaxLines" format="integer" />
+        <attr name="contentLines" format="integer" />
+        <attr name="contentMaxLength" format="integer" />
+        <attr name="contentSingleLine" format="boolean" />
+        <attr name="contentTextGravity" format="string">
+            <enum name="leftCenterVertical" value="0" />
+            <enum name="leftTop" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="contentMarginRight" format="dimension" />
+        <!--右边的单位-->
+        <attr name="rightUnitColor" format="color|reference" />
+        <attr name="rightUnitSize" format="dimension" />
+        <attr name="rightUnitText" format="string" />
+        <attr name="rightUnitImageSrc" format="reference" />
+        <attr name="rightUnitMarginContent" format="dimension" />
+        <attr name="rightUnitEllipsize" format="enum">
+            <enum name="none" value="-1" />
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="marquee" value="3" />
+        </attr>
+        <attr name="rightUnitEms" format="integer" />
+        <attr name="rightUnitTextStyle" format="string">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--Ehi 封装的 EditText-->
+    <declare-styleable name="EhiEditText">
+        <attr name="maxLength" format="integer" />
+    </declare-styleable>
+
+    <!--圆形图像-->
+    <declare-styleable name="CircleImageView">
+        <attr name="circleBorderWidth" format="dimension" />
+        <attr name="circleBorderColor" format="color" />
+        <attr name="circleBorderOverlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="circleBackgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EhiFlowLayout">
+        <attr name="ehiTagFlowLayoutMaxSelect" format="integer" />
+        <attr name="ehiTagFlowLayoutTagGravity" format="enum">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--箭头TextView-->
+    <attr name="CommonArrowTextViewStyle" format="reference" />
+    <declare-styleable name="CommonArrowTextView">
+        <attr name="arrowColor" format="color" />
+    </declare-styleable>
+    <!--滑动渐变的 Tab Layout-->
+    <declare-styleable name="GradualTabLayout">
+        <attr name="tabTextSize"
+            format="dimension" />
+        <attr name="tabWidth"
+            format="dimension" />
+        <attr name="tabRateInDisplayWidth"
+            format="float" />
+        <attr name="tabCutLineWidth"
+            format="dimension" />
+        <attr name="tabCutLineColor"
+            format="color" />
+        <attr name="tabCheckedColor"
+            format="color" />
+        <attr name="tabUncheckedColor"
+            format="color" />
+
+        <attr name="indicatorColor"
+            format="color" />
+        <attr name="indicatorHeight"
+            format="dimension" />
+        <attr name="indicatorZoomScale"
+            format="float" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandIndicator" format="reference"/>
+        <attr name="collapseIndicator" format="reference"/>
+        <attr name="expandToggleType" format="enum">
+            <enum name="ImageButton" value="0"/>
+            <enum name="TextView" value="1"/>
+        </attr>
+        <attr name="expandableTextId" format="reference"/>
+        <attr name="expandCollapseToggleId" format="reference"/>
+        <attr name="expandToggleOnTextClick" format="boolean"/>
+    </declare-styleable>
+</resources>
