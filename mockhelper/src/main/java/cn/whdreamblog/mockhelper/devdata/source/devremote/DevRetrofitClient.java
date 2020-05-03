@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/11 16:42
  * desc : 开发者工具client

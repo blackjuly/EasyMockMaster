@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2017年09月11日
  *     desc   : 为解决弹窗的内容textView单行居中对齐，多行居中对齐
  *     version: v1.0

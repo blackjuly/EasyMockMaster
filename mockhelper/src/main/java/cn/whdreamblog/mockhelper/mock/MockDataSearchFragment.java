@@ -22,7 +22,7 @@ import cn.whdreamblog.mockhelper.widget.MockSearchView;
 /**
  * 搜索mock列表数据
  *
- * @author wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/18 13:35
  */

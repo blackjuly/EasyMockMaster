@@ -13,7 +13,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/05/03 15:56
  * desc : 开发者工具获取验证方式

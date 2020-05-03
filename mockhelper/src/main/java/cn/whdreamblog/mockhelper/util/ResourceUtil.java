@@ -7,8 +7,8 @@ import android.os.Build;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2018/05/23/10:32
  *     desc   : 资源工具类
  *     version: 1.0

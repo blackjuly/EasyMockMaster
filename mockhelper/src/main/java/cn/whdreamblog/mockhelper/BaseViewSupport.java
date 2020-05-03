@@ -6,8 +6,8 @@ import android.view.View;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2017年10月18日
  *     desc   : 新版的 Activity baseView 基础类, 构建 Activity View 的时候推荐直接继承
  *     version: v1.1

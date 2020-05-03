@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/22 16:09
  * desc : 用于管理 司机相关管理配置的接口

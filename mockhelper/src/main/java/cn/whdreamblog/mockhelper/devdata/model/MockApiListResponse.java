@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/05 18:06
  * desc :

@@ -31,7 +31,7 @@ import cn.whdreamblog.mockhelper.widget.MockTitleBar;
 
 
 /**
- * @author wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/4/10
  * desc : 控制mockResponse的添加，修改

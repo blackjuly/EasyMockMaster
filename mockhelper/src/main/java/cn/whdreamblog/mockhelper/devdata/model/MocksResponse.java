@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/10 13:33
  * desc : easyMock列表响应数据

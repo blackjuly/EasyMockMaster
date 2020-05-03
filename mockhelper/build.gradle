@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-
-group = 'com.example'
-version = '1.0'
+group = 'com.github.blackjuly'
+version = '0.0.1'
 
 android {
     compileSdkVersion 28

@@ -23,7 +23,7 @@ import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
  * Associated Presenter {@link MockDataPresenter}
  * Associated Activity {@link MockDataActivity}
  *
- * @author wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/13 19:21
  */

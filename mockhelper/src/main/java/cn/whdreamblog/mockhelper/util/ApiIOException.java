@@ -4,8 +4,8 @@ import java.io.IOException;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2017年10月16日
  *     desc   : 自定义业务异常类
  *     version: v1.0

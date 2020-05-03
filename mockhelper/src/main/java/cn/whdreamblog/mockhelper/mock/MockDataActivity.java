@@ -32,7 +32,7 @@ import cn.whdreamblog.mockhelper.widget.MockTitleBar;
 
 
 /**
- * @author wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/4/5
  * desc : mock数据管理界面

@@ -13,8 +13,8 @@ import java.util.Map;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2017年10月30日
  *     desc   : Gson工具类
  *     version: v1.0

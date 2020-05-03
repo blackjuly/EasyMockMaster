@@ -10,8 +10,8 @@ import android.widget.ListAdapter;
 
 /**
  * <pre>
- *     author : 28476
- *     e-mail : hao.wang@1hai.cn
+ *     author : blackjuly
+ *     e-mail : blackjuly@outlook.com
  *     time   : 2017年09月21日
  *     desc   : 自动补全搜索输入框
  *     version:

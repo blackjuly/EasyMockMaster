@@ -12,14 +12,14 @@ import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
 import okhttp3.OkHttpClient;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/05 18:13
  * desc : 用于开发工具网络请求
  */
 public class MockRemote {
     public static  String BASE_IP ="http://192.168.99.101:7300/";
-    public static  String userId = "hao.wang@1hai.cn";
+    public static  String userId = "blackjuly@outlook.com";
     public static String password = "120026139";
     /**
      * mock列表工程对应的 id

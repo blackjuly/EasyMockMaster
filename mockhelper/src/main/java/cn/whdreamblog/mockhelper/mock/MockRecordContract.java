@@ -10,7 +10,7 @@ import cn.whdreamblog.mockhelper.BaseViewSupport;
 import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/12 10:56
  * desc :

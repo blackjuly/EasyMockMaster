@@ -25,7 +25,7 @@ import cn.whdreamblog.mockhelper.widget.CommonViewHolder;
 
 
 /**
- * @author wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/4/5
  * desc : 开发工具主界面

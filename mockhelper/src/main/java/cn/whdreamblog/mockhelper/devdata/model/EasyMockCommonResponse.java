@@ -3,7 +3,7 @@ package cn.whdreamblog.mockhelper.devdata.model;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/13 18:02
  * desc : 通用响应体

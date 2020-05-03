@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * @author 28476 wanghao <a href="hao.wang@1hai.cn">Contact me.</a>
+ * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
  * @version 1.0
  * @since 2019/04/10 13:30
  * desc :
@@ -16,7 +16,7 @@ public class EasyMockResponseList {
      * code : 200
      * success : true
      * message : success
-     * data : {"project":{"user":{"_id":"5caafcf0ad170a13bc0f137a","name":"hao.wang@1hai.cn","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"},"_id":"5caafcf0ad170a13bc0f137b","name":"演示项目","url":"/example","description":"已创建多种 Mock 类型，只需点击预览便可查看效果。亦可编辑，也可删除。","swagger_url":"","members":[],"extend":{"_id":"5caafcf0ad170a13bc0f137c","is_workbench":false}},"mocks":[{"_id":"5caafcf0ad170a13bc0f1381","url":"/mock","method":"get","description":"带随机数据的 mock","mode":"{\"success\":true,\"data\":{\"projects|3-10\":[{\"name\":\"演示用\",\"url\":\"@url\",\"email\":\"@email\",\"address\":\"@county(true)\",\"string|1-10\":\"★\",\"number|1-100\":100,\"boolean|1-2\":true,\"object|2\":{\"310000\":\"上海市\",\"320000\":\"江苏省\",\"330000\":\"浙江省\"}}]}}"},{"_id":"5caafcf0ad170a13bc0f1382","url":"/","method":"get","description":"自定义响应的 mock","mode":"{success: true, data: {name: \"hh\"}, _res: {status: 400, data: {success: false}, cookies: {test: \"true\"}, headers: {Power: \"easy-mock\"}}}"},{"_id":"5caafcf0ad170a13bc0f137e","url":"/query","method":"get","description":"根据请求参数返回指定数据，试试在 url 上加 ?name={任意值}","mode":"{ success :true, data: { default: \"hah\", _req: function({ _req }) { return _req }, name: function({ _req }) { return _req.query.name || this.default }}}"},{"_id":"5caafcf0ad170a13bc0f137f","url":"/restful/:id/list","method":"get","description":"支持 restful 的 mock，替换 id 试试","mode":"{\"success\":true,\"data\":[{\"user\":{\"name\":\"演示用\"}}]}"},{"_id":"5caafcf0ad170a13bc0f1380","url":"/proxy","method":"get","description":"支持接口代理的 mock，试试在 url 上加 ?s={数字}","mode":"https://api.m.sohu.com/autonews/pool/?n=%E6%96%B0%E9%97%BB&s=1"},{"_id":"5caafcf0ad170a13bc0f137d","url":"/upload","method":"post","description":"这只是一个响应 post 接口返回随机数据的例子","mode":"{ data: { img: function({ _req, Mock }) { return _req.body.fileName + \"_\" + Mock.mock(\"@image\") }}}"}]}
+     * data : {"project":{"user":{"_id":"5caafcf0ad170a13bc0f137a","name":"blackjuly@outlook.com","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"},"_id":"5caafcf0ad170a13bc0f137b","name":"演示项目","url":"/example","description":"已创建多种 Mock 类型，只需点击预览便可查看效果。亦可编辑，也可删除。","swagger_url":"","members":[],"extend":{"_id":"5caafcf0ad170a13bc0f137c","is_workbench":false}},"mocks":[{"_id":"5caafcf0ad170a13bc0f1381","url":"/mock","method":"get","description":"带随机数据的 mock","mode":"{\"success\":true,\"data\":{\"projects|3-10\":[{\"name\":\"演示用\",\"url\":\"@url\",\"email\":\"@email\",\"address\":\"@county(true)\",\"string|1-10\":\"★\",\"number|1-100\":100,\"boolean|1-2\":true,\"object|2\":{\"310000\":\"上海市\",\"320000\":\"江苏省\",\"330000\":\"浙江省\"}}]}}"},{"_id":"5caafcf0ad170a13bc0f1382","url":"/","method":"get","description":"自定义响应的 mock","mode":"{success: true, data: {name: \"hh\"}, _res: {status: 400, data: {success: false}, cookies: {test: \"true\"}, headers: {Power: \"easy-mock\"}}}"},{"_id":"5caafcf0ad170a13bc0f137e","url":"/query","method":"get","description":"根据请求参数返回指定数据，试试在 url 上加 ?name={任意值}","mode":"{ success :true, data: { default: \"hah\", _req: function({ _req }) { return _req }, name: function({ _req }) { return _req.query.name || this.default }}}"},{"_id":"5caafcf0ad170a13bc0f137f","url":"/restful/:id/list","method":"get","description":"支持 restful 的 mock，替换 id 试试","mode":"{\"success\":true,\"data\":[{\"user\":{\"name\":\"演示用\"}}]}"},{"_id":"5caafcf0ad170a13bc0f1380","url":"/proxy","method":"get","description":"支持接口代理的 mock，试试在 url 上加 ?s={数字}","mode":"https://api.m.sohu.com/autonews/pool/?n=%E6%96%B0%E9%97%BB&s=1"},{"_id":"5caafcf0ad170a13bc0f137d","url":"/upload","method":"post","description":"这只是一个响应 post 接口返回随机数据的例子","mode":"{ data: { img: function({ _req, Mock }) { return _req.body.fileName + \"_\" + Mock.mock(\"@image\") }}}"}]}
      */
 
     @SerializedName("code")
@@ -62,7 +62,7 @@ public class EasyMockResponseList {
 
     public static class DataResponse {
         /**
-         * project : {"user":{"_id":"5caafcf0ad170a13bc0f137a","name":"hao.wang@1hai.cn","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"},"_id":"5caafcf0ad170a13bc0f137b","name":"演示项目","url":"/example","description":"已创建多种 Mock 类型，只需点击预览便可查看效果。亦可编辑，也可删除。","swagger_url":"","members":[],"extend":{"_id":"5caafcf0ad170a13bc0f137c","is_workbench":false}}
+         * project : {"user":{"_id":"5caafcf0ad170a13bc0f137a","name":"blackjuly@outlook.com","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"},"_id":"5caafcf0ad170a13bc0f137b","name":"演示项目","url":"/example","description":"已创建多种 Mock 类型，只需点击预览便可查看效果。亦可编辑，也可删除。","swagger_url":"","members":[],"extend":{"_id":"5caafcf0ad170a13bc0f137c","is_workbench":false}}
          * mocks : [{"_id":"5caafcf0ad170a13bc0f1381","url":"/mock","method":"get","description":"带随机数据的 mock","mode":"{\"success\":true,\"data\":{\"projects|3-10\":[{\"name\":\"演示用\",\"url\":\"@url\",\"email\":\"@email\",\"address\":\"@county(true)\",\"string|1-10\":\"★\",\"number|1-100\":100,\"boolean|1-2\":true,\"object|2\":{\"310000\":\"上海市\",\"320000\":\"江苏省\",\"330000\":\"浙江省\"}}]}}"},{"_id":"5caafcf0ad170a13bc0f1382","url":"/","method":"get","description":"自定义响应的 mock","mode":"{success: true, data: {name: \"hh\"}, _res: {status: 400, data: {success: false}, cookies: {test: \"true\"}, headers: {Power: \"easy-mock\"}}}"},{"_id":"5caafcf0ad170a13bc0f137e","url":"/query","method":"get","description":"根据请求参数返回指定数据，试试在 url 上加 ?name={任意值}","mode":"{ success :true, data: { default: \"hah\", _req: function({ _req }) { return _req }, name: function({ _req }) { return _req.query.name || this.default }}}"},{"_id":"5caafcf0ad170a13bc0f137f","url":"/restful/:id/list","method":"get","description":"支持 restful 的 mock，替换 id 试试","mode":"{\"success\":true,\"data\":[{\"user\":{\"name\":\"演示用\"}}]}"},{"_id":"5caafcf0ad170a13bc0f1380","url":"/proxy","method":"get","description":"支持接口代理的 mock，试试在 url 上加 ?s={数字}","mode":"https://api.m.sohu.com/autonews/pool/?n=%E6%96%B0%E9%97%BB&s=1"},{"_id":"5caafcf0ad170a13bc0f137d","url":"/upload","method":"post","description":"这只是一个响应 post 接口返回随机数据的例子","mode":"{ data: { img: function({ _req, Mock }) { return _req.body.fileName + \"_\" + Mock.mock(\"@image\") }}}"}]
          */
 
@@ -89,7 +89,7 @@ public class EasyMockResponseList {
 
         public static class ProjectResponse {
             /**
-             * user : {"_id":"5caafcf0ad170a13bc0f137a","name":"hao.wang@1hai.cn","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"}
+             * user : {"_id":"5caafcf0ad170a13bc0f137a","name":"blackjuly@outlook.com","nick_name":"1554709744476","head_img":"//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png","create_at":"2019-04-10T05:28:41.277Z"}
              * _id : 5caafcf0ad170a13bc0f137b
              * name : 演示项目
              * url : /example
@@ -183,7 +183,7 @@ public class EasyMockResponseList {
             public static class UserResponse {
                 /**
                  * _id : 5caafcf0ad170a13bc0f137a
-                 * name : hao.wang@1hai.cn
+                 * name : blackjuly@outlook.com
                  * nick_name : 1554709744476
                  * head_img : //img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png
                  * create_at : 2019-04-10T05:28:41.277Z
