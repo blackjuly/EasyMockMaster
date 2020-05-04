@@ -48,7 +48,7 @@ implements DevelopMainContract.View{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.module_develop_activity_main);
+        setContentView(R.layout.mock_activity_main);
         initViews();
         new DevelopMainPresenter(this);
         presenter.start();
@@ -101,7 +101,7 @@ implements DevelopMainContract.View{
 
         @Override
         protected int getLayoutResId(String data, int position) {
-            return R.layout.module_develop_item_main;
+            return R.layout.mock_item_main;
         }
 
         @Override

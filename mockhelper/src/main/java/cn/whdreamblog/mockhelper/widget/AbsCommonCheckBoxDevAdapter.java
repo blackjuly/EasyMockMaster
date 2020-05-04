@@ -22,7 +22,7 @@ public abstract class AbsCommonCheckBoxDevAdapter extends CommonRecyclerAdapter<
 
     @Override
     protected int getLayoutResId(MocksResponse data, int position) {
-        return R.layout.module_develop_item_mock;
+        return R.layout.mock_item_mock;
     }
 
 

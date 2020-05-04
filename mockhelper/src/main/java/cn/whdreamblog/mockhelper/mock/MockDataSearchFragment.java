@@ -49,7 +49,7 @@ public class MockDataSearchFragment extends EhiBaseDialogFragment {
     @Override
     protected Dialog createDialog(Bundle savedInstanceState, @NonNull Context context) {
         return new CommonDialog.Builder(context)
-                .setLayoutRes(R.layout.module_develop_fragment_search_mock_data)
+                .setLayoutRes(R.layout.mock_fragment_search_mock_data)
                 .setGravity(Gravity.TOP)
                 .setFillScreenWidth()
                 .create();

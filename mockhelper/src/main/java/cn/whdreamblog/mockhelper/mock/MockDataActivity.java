@@ -55,7 +55,7 @@ public class MockDataActivity extends BaseActivity<MockDataContract.Presenter> i
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.module_develop_activity_mock_data);
+        setContentView(R.layout.mock_activity_mock_data);
         mockTitleBar2 = findViewById(R.id.ehiTitleBar2);
         viewPager = findViewById(R.id.view_pager);
         cbAllAdd = findViewById(R.id.cb_all_add);

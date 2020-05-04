@@ -34,7 +34,7 @@ public class ProgressDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.module_mock_frag_progress_dialog, container, false);
+        return inflater.inflate(R.layout.mock_frag_progress_dialog, container, false);
     }
 
 }

@@ -63,7 +63,7 @@ public class MockRecordActivity extends BaseActivity<MockRecordContract.Presente
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.module_develop_activity_mock_record);
+        setContentView(R.layout.mock_activity_mock_record);
         mockTitleBar2 = findViewById(R.id.ehiTitleBar2);
         cbAllUpdate = findViewById(R.id.cb_all_update);
         recycleMock = findViewById(R.id.recycle_mock);

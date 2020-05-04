@@ -4,10 +4,10 @@
     android:layout_height="wrap_content"
     android:minHeight="44dp">
 
-    <include layout="@layout/lib_base_view_title_bar_normal_content" />
+    <include layout="@layout/mock_view_title_bar_normal_content" />
 
     <include
-        layout="@layout/lib_base_view_title_bar_search_content"
+        layout="@layout/mock_view_title_bar_search_content"
         android:visibility="gone" />
 
 </FrameLayout>

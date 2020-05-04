@@ -53,7 +53,7 @@ public class DevelopToolWindow {
         }
 
         // 添加悬浮视图
-        View suspendContent = View.inflate(activity, R.layout.module_develop_layout_entrance, null);
+        View suspendContent = View.inflate(activity, R.layout.mock_layout_entrance, null);
         suspendContent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         ViewGroup contentView = (ViewGroup) activity.getWindow().getDecorView();
         contentView.addView(suspendContent);

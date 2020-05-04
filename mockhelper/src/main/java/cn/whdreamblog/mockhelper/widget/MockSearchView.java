@@ -36,7 +36,7 @@ public class MockSearchView<T> extends FrameLayout {
 
     public MockSearchView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        View.inflate(context, R.layout.module_mock_widget_mock_search_view, this);
+        View.inflate(context, R.layout.mock_widget_mock_search_view, this);
         initView();
     }
 

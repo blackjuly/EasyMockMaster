@@ -55,7 +55,7 @@ public class MockDataFragment extends BaseFragment {
 
     @Override
     public int getLayoutResId() {
-        return R.layout.module_develop_fragment_mock_data;
+        return R.layout.mock_fragment_mock_data;
     }
 
     @Override

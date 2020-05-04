@@ -92,7 +92,7 @@ public class MockDataSelectListFragment extends BaseFragment {
 
     @Override
     public int getLayoutResId() {
-        return R.layout.module_develop_fragment_mock_data_select_list;
+        return R.layout.mock_fragment_mock_data_select_list;
     }
 
     private   static class DevSelectListAdapter extends AbsCommonCheckBoxDevAdapter {

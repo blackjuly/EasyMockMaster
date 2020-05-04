@@ -55,7 +55,7 @@ public class MockTitleBar extends RelativeLayout {
 
     public MockTitleBar(@NonNull Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        View.inflate(context, R.layout.lib_base_view_title_bar, this);
+        View.inflate(context, R.layout.mock_view_title_bar, this);
         initView();
         initAttr(context, attrs);
         initListener();
@@ -191,7 +191,7 @@ public class MockTitleBar extends RelativeLayout {
         }
         arrayAdapter = new ArrayAdapter<String>(
                 getContext()
-                , R.layout.lib_base_view_title_bar_search_result
+                , R.layout.mock_view_title_bar_search_result
                 , R.id.tv_list_menu_item
                 , dataList
         );
