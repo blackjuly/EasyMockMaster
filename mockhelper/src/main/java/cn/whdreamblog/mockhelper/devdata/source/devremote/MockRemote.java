@@ -40,7 +40,7 @@ public class MockRemote {
     public static final String page_size = "2000";
     public static final String page_index = "1";
     public static MockService mockService = DevRetrofitClient.getInstance().getRetrofit().create(MockService.class);
-    public static DevConfigApi devConfigApi = DevRetrofitConfigClient.getInstance().getRetrofit().create(DevConfigApi.class);
+
     private static final Deque<MocksResponse> DEQUE = new LinkedList<>();
     public static Set<MocksResponse> SelectDataSet = new HashSet<>();
     public static final String SELECT_MOCK_LIST_TAG = "SELECT_MOCK_LIST_TAG";
@@ -145,9 +145,7 @@ public class MockRemote {
         SelectDataSet = selectDataSet;
     }
 
-    public static DevConfigApi getDevConfigApi() {
-        return devConfigApi;
-    }
+
 
     public static void setAuth(String auth) {
         MockRemote.auth = auth;

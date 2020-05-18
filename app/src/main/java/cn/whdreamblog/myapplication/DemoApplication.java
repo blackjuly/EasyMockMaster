@@ -3,6 +3,7 @@ package cn.whdreamblog.myapplication;
 import android.app.Application;
 
 import cn.whdreamblog.mockhelper.EasyMockHelperApplication;
+import cn.whdreamblog.myapplication.data.NewWorkManger;
 
 /**
  * @author wanghao <a href="blackJuly@outlook.com">Contact me.</a>
@@ -19,5 +20,6 @@ public class DemoApplication extends Application {
     public void onCreate() {
         super.onCreate();
         EasyMockHelperApplication.init(this,userId,password,baseIp,mockDataProjectId);
+        NewWorkManger.init();
     }
 }

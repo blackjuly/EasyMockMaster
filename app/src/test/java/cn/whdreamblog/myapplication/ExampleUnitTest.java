@@ -2,7 +2,7 @@ package cn.whdreamblog.myapplication;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import cn.whdreamblog.myapplication.data.NewWorkManger;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +12,18 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        NewWorkManger demo = new NewWorkManger();
+        try {
+            String url = demo.generateGetDiaryWeatherURL(
+                    "shanghai",
+                    "zh-Hans",
+                    "c",
+                    "1",
+                    "1"
+            );
+            System.out.println("URL:" + url);
+        } catch (Exception e) {
+            System.out.println("Exception:" + e);
+        }
     }
 }

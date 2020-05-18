@@ -11,8 +11,10 @@ import okhttp3.Interceptor;
  * desc :
  */
 public interface IMockService {
+    IMockService defaultMock = new MockServiceImpl();
     /**
      * @return 获取mock拦截器
      */
     List<Interceptor> getMockInterceptors();
+
 }
