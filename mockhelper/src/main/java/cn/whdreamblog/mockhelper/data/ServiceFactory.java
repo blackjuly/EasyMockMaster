@@ -1,4 +1,4 @@
-package cn.whdreamblog.mockhelper.devdata.source.devremote;
+package cn.whdreamblog.mockhelper.data;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import okhttp3.OkHttpClient;
@@ -11,15 +11,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @since 2019/04/11 16:42
  * desc : 开发者工具client
  */
-public class DevRetrofitClient {
+public class ServiceFactory {
     private Retrofit retrofit = null;
     private OkHttpClient okHttpClient = null;
 
     private static class RetrofitClientHolder {
-        public static DevRetrofitClient retrofitClient = new DevRetrofitClient();
+        public static ServiceFactory retrofitClient = new ServiceFactory();
     }
 
-    public static DevRetrofitClient getInstance() {
+    public static ServiceFactory getInstance() {
         return RetrofitClientHolder.retrofitClient;
     }
 

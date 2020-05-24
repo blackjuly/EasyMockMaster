@@ -7,7 +7,7 @@ import java.util.Set;
 
 import cn.whdreamblog.mockhelper.BasePresenter;
 import cn.whdreamblog.mockhelper.BaseViewSupport;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 
 /**
  * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>

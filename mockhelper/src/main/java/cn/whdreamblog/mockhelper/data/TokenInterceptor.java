@@ -1,4 +1,4 @@
-package cn.whdreamblog.mockhelper.devdata.source.devremote;
+package cn.whdreamblog.mockhelper.data;
 
 
 import java.io.IOException;

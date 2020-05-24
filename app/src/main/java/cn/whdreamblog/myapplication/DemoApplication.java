@@ -19,7 +19,7 @@ public class DemoApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        EasyMockHelperApplication.init(this,userId,password,baseIp,mockDataProjectId);
+        EasyMockHelperApplication.init(this,userId,password,baseIp,mockDataProjectId," http://192.168.99.101:7300/mock/5cad5c0ead170a13bc0f138c/driverDemo");
         NewWorkManger.init();
     }
 }

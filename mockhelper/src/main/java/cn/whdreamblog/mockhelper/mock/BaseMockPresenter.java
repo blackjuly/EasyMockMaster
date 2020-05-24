@@ -1,11 +1,10 @@
 package cn.whdreamblog.mockhelper.mock;
 
 
-
 import cn.whdreamblog.mockhelper.BasePresenterImp;
 import cn.whdreamblog.mockhelper.BaseView;
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockResponseList;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.EasyMockResponseList;
 import io.reactivex.Observable;
 
 /**
@@ -19,7 +18,7 @@ public class BaseMockPresenter<T extends BaseView> extends BasePresenterImp<T> {
         super(view);
     }
     public Observable<EasyMockResponseList> getMockListCompletable(){
-        return MockRemote.mockService.getMockList(
+        return mockService.getMockList(
                 MockRemote.mockDataProjectId
                 , MockRemote.page_size
                 , MockRemote.page_index

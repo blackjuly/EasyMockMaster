@@ -1,4 +1,4 @@
-package cn.whdreamblog.mockhelper.devdata.model;
+package cn.whdreamblog.mockhelper.data.model;
 
 /**
  * 定义登陆easymock的方式

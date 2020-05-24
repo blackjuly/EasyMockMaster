@@ -1,4 +1,4 @@
-package cn.whdreamblog.mockhelper.devdata.model;
+package cn.whdreamblog.mockhelper.data.model;
 
 import android.os.Bundle;
 import android.os.Parcelable;

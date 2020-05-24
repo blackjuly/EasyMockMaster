@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockCommonResponse;
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockResponseList;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.EasyMockCommonResponse;
+import cn.whdreamblog.mockhelper.data.model.EasyMockResponseList;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import cn.whdreamblog.mockhelper.util.ApiIOException;
 import cn.whdreamblog.mockhelper.util.MyLogger;
 import io.reactivex.Observable;
@@ -75,7 +75,7 @@ public class MockRecordPresenter extends BaseMockPresenter<MockRecordContract.Vi
                     @Override
                     public Observable<EasyMockCommonResponse<String>> apply(MocksResponse response) throws Exception {
                         selectResponse = response;
-                        return MockRemote.mockService.updateRecord(response).toObservable();
+                        return mockService.updateRecord(response).toObservable();
                     }
                 }).doOnNext(new Consumer<EasyMockCommonResponse<String>>() {
                     @Override

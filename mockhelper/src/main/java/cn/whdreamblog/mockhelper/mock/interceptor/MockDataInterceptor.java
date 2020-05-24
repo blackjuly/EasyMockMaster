@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import cn.whdreamblog.mockhelper.util.MockUtils;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
@@ -21,7 +21,7 @@ import okhttp3.Response;
  */
 public class MockDataInterceptor implements Interceptor {
     public static final String API = "api";
-    private final String baseUrl = MockRemote.BASE_IP+"mock/5cad5c0ead170a13bc0f138c/driverDemo";
+    private final String baseUrl = MockRemote.projectBaseUrl;
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request originalRequest = chain.request();

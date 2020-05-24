@@ -1,14 +1,16 @@
-package cn.whdreamblog.mockhelper.devdata.source.devremote;
+package cn.whdreamblog.mockhelper.data;
 
 import android.text.TextUtils;
 
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Set;
 
+import cn.whdreamblog.mockhelper.EasyMockHelperApplication;
 import cn.whdreamblog.mockhelper.util.MockInitHelper;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import okhttp3.OkHttpClient;
 
 /**
@@ -18,32 +20,30 @@ import okhttp3.OkHttpClient;
  * desc : 用于开发工具网络请求
  */
 public class MockRemote {
+    private static MockRemote remote;
     public static  String BASE_IP ="http://192.168.99.101:7300/";
     public static  String userId = "blackjuly@outlook.com";
-    public static String password = "120026139";
+    public static String password = "123456";
     /**
      * mock列表工程对应的 id
      */
     public static  String mockDataProjectId = "5cad5c0ead170a13bc0f138c";
-    public static final String DEVELOP_MOCK_AUTH_TAG = "DevelopMockAuthTag";
-    public static String auth ;
-    public static final String cookie = "hudson_auto_refresh=false; easy-mock_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWFmY2YwYWQxNzBhMTNiYzBmMTM3YSIsImlhdCI6MTU1NDg3NDA0NSwiZXhwIjoxNTU2MDgzNjQ1fQ.pehc1q-lymxo2HHP9qZcKj1G56wfXHn3Y5YbBxQlfwg";
+    private static final String DEVELOP_MOCK_AUTH_TAG = "DevelopMockAuthTag";
+    private static String auth ;
+    static final String cookie = "hudson_auto_refresh=false; easy-mock_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWFmY2YwYWQxNzBhMTNiYzBmMTM3YSIsImlhdCI6MTU1NDg3NDA0NSwiZXhwIjoxNTU2MDgzNjQ1fQ.pehc1q-lymxo2HHP9qZcKj1G56wfXHn3Y5YbBxQlfwg";
     private static final int MAX_REQUEST = 30;
 
-    /**
-     * 司机app 接口分割符
-     */
-    public static final String API = "/api/";
+
     /**
      * 获取easymock的列表，必备的界面数据
      */
     public static final String page_size = "2000";
     public static final String page_index = "1";
-    public static MockService mockService = DevRetrofitClient.getInstance().getRetrofit().create(MockService.class);
 
     private static final Deque<MocksResponse> DEQUE = new LinkedList<>();
     public static Set<MocksResponse> SelectDataSet = new HashSet<>();
     public static final String SELECT_MOCK_LIST_TAG = "SELECT_MOCK_LIST_TAG";
+    public static String projectBaseUrl = MockRemote.BASE_IP+"mock/5cad5c0ead170a13bc0f138c/driverDemo";
     /**
      * mock所有的数据
      */
@@ -53,6 +53,30 @@ public class MockRemote {
      */
     private static String mockPrefix = "";
     private static boolean openMockRecord = false;
+
+    private EasyMockHelperApplication context;
+    /**
+     * 接口分割符
+     * // TODO: 2020/5/23 下个版本分割成 真实url和 mock的url分开使用      */
+    private  String splitter;
+
+    private MockRemote(EasyMockHelperApplication context) {
+        Objects.requireNonNull(context);
+        this.context = context;
+        this.splitter = context.getUrlMatcher().splitter();
+    }
+
+    public static void init(EasyMockHelperApplication context){
+       remote = new MockRemote(context);
+    }
+    public static MockRemote get(){
+        Objects.requireNonNull(remote);
+        return remote;
+    }
+
+    public String getSplitter() {
+        return splitter;
+    }
 
     /**
      *  添加请求
@@ -71,7 +95,7 @@ public class MockRemote {
         ){
             return;
         }
-        String[] parts = url.split(API);
+        String[] parts = url.split(get().splitter);
         if (parts.length < 2){
             return;
         }
@@ -108,17 +132,17 @@ public class MockRemote {
         if (TextUtils.isEmpty(mockResponseUrl)){
             return;
         }
-        if (!mockResponseUrl.contains(API)){
+        if (!mockResponseUrl.contains(get().splitter)){
             return;
         }
-        String[] parts = mockResponseUrl.split(API);
+        String[] parts = mockResponseUrl.split(get().splitter);
         if (parts.length <= 0){
             return;
         }
-        mockPrefix = parts[0].concat(API);
+        mockPrefix = parts[0].concat(get().splitter);
     }
     public static OkHttpClient getClient(){
-        return DevRetrofitClient.getInstance().getOkHttpClient();
+        return ServiceFactory.getInstance().getOkHttpClient();
     }
 
     public static boolean isOpenMockRecord() {
@@ -144,8 +168,6 @@ public class MockRemote {
     public static void setSelectDataSet(Set<MocksResponse> selectDataSet) {
         SelectDataSet = selectDataSet;
     }
-
-
 
     public static void setAuth(String auth) {
         MockRemote.auth = auth;

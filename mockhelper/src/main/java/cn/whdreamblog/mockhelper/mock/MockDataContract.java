@@ -5,7 +5,7 @@ import java.util.List;
 
 import cn.whdreamblog.mockhelper.BasePresenter;
 import cn.whdreamblog.mockhelper.BaseView;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 
 /**
  * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>

@@ -4,9 +4,9 @@ package cn.whdreamblog.mockhelper.mock;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockResponseList;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.EasyMockResponseList;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
@@ -51,7 +51,7 @@ public class MockDataPresenter extends BaseMockPresenter<MockDataContract.View> 
                     public void accept(List<MocksResponse> mocksResponses) throws Exception {
                         List<String> searchList = new ArrayList<>(mocksResponses.size());
                         for (MocksResponse mocksResponse : mocksResponses){
-                            String temp = mocksResponse.getUrl().split(MockRemote.API)[1];
+                            String temp = mocksResponse.getUrl().split(MockRemote.get().getSplitter())[1];
                             searchList.add(temp+"method:"+mocksResponse.getMethod());
                         }
                         view.initSearchBar(searchList);

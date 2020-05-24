@@ -21,8 +21,8 @@ import java.util.Set;
 
 import cn.whdreamblog.mockhelper.BaseActivity;
 import cn.whdreamblog.mockhelper.R;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import cn.whdreamblog.mockhelper.util.MockUtils;
 import cn.whdreamblog.mockhelper.util.ToastUtil;
 import cn.whdreamblog.mockhelper.widget.AbsCommonCheckBoxDevAdapter;

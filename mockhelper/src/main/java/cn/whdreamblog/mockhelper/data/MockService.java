@@ -1,12 +1,12 @@
-package cn.whdreamblog.mockhelper.devdata.source.devremote;
+package cn.whdreamblog.mockhelper.data;
 
 import java.util.List;
 
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockCommonResponse;
-import cn.whdreamblog.mockhelper.devdata.model.EasyMockResponseList;
-import cn.whdreamblog.mockhelper.devdata.model.LoginRequest;
-import cn.whdreamblog.mockhelper.devdata.model.LoginResponse;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
+import cn.whdreamblog.mockhelper.data.model.EasyMockCommonResponse;
+import cn.whdreamblog.mockhelper.data.model.EasyMockResponseList;
+import cn.whdreamblog.mockhelper.data.model.LoginRequest;
+import cn.whdreamblog.mockhelper.data.model.LoginResponse;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import io.reactivex.Single;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -44,4 +44,6 @@ public interface MockService {
      */
     @GET("api/project?page_size=30&page_index=1&keywords=&type=&group=&filter_by_author=0")
     Single<EasyMockCommonResponse<List>> testConnection();
+
+
 }

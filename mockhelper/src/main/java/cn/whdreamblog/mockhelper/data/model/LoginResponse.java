@@ -1,4 +1,4 @@
-package cn.whdreamblog.mockhelper.devdata.model;
+package cn.whdreamblog.mockhelper.data.model;
 /**
  * @author  wanghao <a href="blackJuly@outlook.com">Contact me.</a>
  * @version 1.0

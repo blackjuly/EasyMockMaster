@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.blackjuly'
-version = '0.0.4'
+version = '0.0.5'
 ext {
 
 
@@ -37,13 +37,48 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    defaultPublishConfig "prodRelease"
+    // Using gradle plugin 3 you need to specify flavor dimensions.
+    flavorDimensions 'buildType'
+
+    // If you need to add more flavors, consider using flavor dimensions.
+    productFlavors {
+        mock {
+            dimension 'buildType'
+        }
+        prod {
+            dimension 'buildType'
+        }
+    }
+
+    // Remove mockRelease as it's not needed.
+    android.variantFilter { variant ->
+        if(variant.buildType.name.equals('release')
+                && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true)
+        }
+    }
 }
 
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.javaDirectories
+}
+
+artifacts {
+    archives sourcesJar
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

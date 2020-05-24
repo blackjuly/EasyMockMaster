@@ -4,7 +4,8 @@ import android.app.Application;
 
 import java.util.Objects;
 
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.mock.interceptor.UrlMatcher;
 import cn.whdreamblog.mockhelper.util.MockInitHelper;
 
 /**
@@ -17,10 +18,17 @@ public class EasyMockHelperApplication {
     public static final String HTTP_STRING = "http";
     private Application content;
     private static EasyMockHelperApplication app ;
-    private EasyMockHelperApplication(Application application){
+    private UrlMatcher urlMatcher;
+    private EasyMockHelperApplication(Application application,UrlMatcher matcher){
+        Objects.requireNonNull(application);
+        Objects.requireNonNull(matcher);
         this.content = application;
+        this.urlMatcher = matcher;
     }
-
+    public static void init(Application application, String userName, String password, String baseUrl
+            , String projectId, String projectBaseUrl){
+        init(application, userName, password, baseUrl, projectId, projectBaseUrl,UrlMatcher.defaultMatcher);
+    }
     /**
      *
      * @param application 上下文
@@ -28,15 +36,17 @@ public class EasyMockHelperApplication {
      * @param password 密码
      * @param baseUrl baseUrl
      * @param projectId 工程id
+     * @param matcher 匹配url
      */
-    public static void init(Application application,String userName,String password,String baseUrl,String projectId){
-        if (application == null){
-            throw new RuntimeException("application must not null!");
-        }
+    public static void init(Application application, String userName, String password, String baseUrl
+            , String projectId, String projectBaseUrl, UrlMatcher matcher){
+
+        Objects.requireNonNull(application);
         Objects.requireNonNull(userName);
         Objects.requireNonNull(password);
         Objects.requireNonNull(baseUrl);
         Objects.requireNonNull(projectId);
+        Objects.requireNonNull(projectBaseUrl);
         if (!baseUrl.toLowerCase().startsWith(HTTP_STRING)){
             throw new IllegalArgumentException("");
         }
@@ -44,14 +54,20 @@ public class EasyMockHelperApplication {
         MockRemote.userId = userName;
         MockRemote.password = password;
         MockRemote.mockDataProjectId = projectId;
+        MockRemote.projectBaseUrl = projectBaseUrl;
         MockInitHelper.get().init(application);
         application.registerActivityLifecycleCallbacks(new DevelopActivityLifecycle());
-        app = new EasyMockHelperApplication(application);
+        app = new EasyMockHelperApplication(application,matcher);
+        MockRemote.init(app);
     }
     public static EasyMockHelperApplication get(){
         if (app == null){
             throw new RuntimeException("You must call init first");
         }
         return app;
+    }
+
+    public UrlMatcher getUrlMatcher() {
+        return urlMatcher;
     }
 }

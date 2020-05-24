@@ -5,7 +5,7 @@ import android.content.Context;
 import java.util.List;
 
 import cn.whdreamblog.mockhelper.R;
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 
 
 /**

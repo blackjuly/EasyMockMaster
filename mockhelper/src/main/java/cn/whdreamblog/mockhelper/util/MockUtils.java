@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import cn.whdreamblog.mockhelper.devdata.model.MocksResponse;
-import cn.whdreamblog.mockhelper.devdata.source.devremote.MockRemote;
+import cn.whdreamblog.mockhelper.data.MockRemote;
+import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 

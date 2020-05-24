@@ -7,7 +7,10 @@ package cn.whdreamblog.mockhelper;
  * desc : base class for presenter
  */
 public interface BasePresenter {
-
+    /**
+     * 每个界面启动的第一个调用方法
+     */
+    void start();
     /**
      * ps:目前在用 rxLifeCycle,当如果发生问题，可能需要全部换回自己关闭rxJava
      * 取消注册

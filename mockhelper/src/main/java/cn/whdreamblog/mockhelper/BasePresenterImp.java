@@ -2,8 +2,9 @@ package cn.whdreamblog.mockhelper;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import cn.whdreamblog.mockhelper.data.MockService;
 import cn.whdreamblog.mockhelper.schedulers.BaseSchedulerProvider;
-import cn.whdreamblog.mockhelper.schedulers.SchedulerProvider;
 import cn.whdreamblog.mockhelper.util.ErrorUtil;
 import cn.whdreamblog.mockhelper.util.MyLogger;
 import io.reactivex.Observable;
@@ -22,7 +23,7 @@ public class BasePresenterImp<T extends BaseView> implements BasePresenter {
 
     protected final MyLogger myLogger = MyLogger.getLogger(BasePresenterImp.class.getSimpleName());  // MyLogger 日志工具
     protected final CompositeDisposable compositeSubscription = new CompositeDisposable();           //管理所有的Disposable
-
+    protected  MockService mockService;
     protected final T view;
 
     protected final BaseSchedulerProvider schedulerProvider;
@@ -33,11 +34,15 @@ public class BasePresenterImp<T extends BaseView> implements BasePresenter {
         if (view != null) {
             view.bindPresenter(this);
         }
-        this.schedulerProvider = SchedulerProvider.getInstance();
-
+        this.schedulerProvider = Injection.provideSchedulerProvider();
+        this.mockService = Injection.provideTasksRepository(EasyMockHelperApplication.get());
     }
 
 
+    @Override
+    public void start() {
+
+    }
 
     /**
      * 取消注册
