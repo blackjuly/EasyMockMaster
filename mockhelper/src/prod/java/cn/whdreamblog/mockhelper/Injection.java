@@ -20,10 +20,15 @@ import android.support.annotation.NonNull;
 
 import java.util.Objects;
 
+import cn.whdreamblog.mockhelper.data.MockService;
+import cn.whdreamblog.mockhelper.data.ServiceFactory;
+import cn.whdreamblog.mockhelper.schedulers.BaseSchedulerProvider;
+import cn.whdreamblog.mockhelper.schedulers.SchedulerProvider;
+
 
 /**
  * Enables injection of production implementations for
- * {@link TasksDataSource} at compile time.
+ * {@link } at compile time.
  * TODO: 2020/5/24 考虑单例？？
  */
 public class Injection {
