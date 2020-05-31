@@ -46,9 +46,8 @@ public class NewWorkManger {
 
     private String SUGGESTION_URL = "https://api.seniverse.com/v3/life/suggestion.json";
 
-    private String TIANQI_API_SECRET_KEY = "ST-8-qfa3D9uRDJZ9"; //
+    private String TIANQI_API_SECRET_KEY = "ST-8-qfa3D9uRDJZ9";
 
-    private String TIANQI_API_USER_ID = "PF87Q0bmpBlIr3PoF"; //
 
     /**
      * Generate HmacSHA1 signature with given data string and key

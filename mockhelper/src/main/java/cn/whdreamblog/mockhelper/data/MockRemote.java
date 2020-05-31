@@ -123,10 +123,7 @@ public class MockRemote {
      * @return 开关管理是否可以录制
      */
     private static boolean disAllowRecord() {
-        if (!openMockRecord){
-            return true;
-        }
-        return TextUtils.isEmpty(mockPrefix);
+        return !openMockRecord;
     }
 
     public static void updatePrefix(String mockResponseUrl){
@@ -136,6 +133,17 @@ public class MockRemote {
         if (!mockResponseUrl.contains(get().splitter)){
             return;
         }
+        //说明没有奇怪的东西被添加进来
+        if (mockResponseUrl.startsWith(get().splitter) ||
+                mockResponseUrl.startsWith("/"+get().splitter)){
+            return;
+        }
+        /*
+        此处处理 mock url在用swagger生成时，有时会有奇怪的前缀
+        真实地址 www.demo.cn/getList
+        例如swagger地址 http://xxx.cn/foo/swagger/docs/v1 则mock地址就会包含 foo/getList/
+        所以需要将前缀保留下来
+         */
         String[] parts = mockResponseUrl.split(get().splitter);
         if (parts.length <= 0){
             return;

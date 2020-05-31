@@ -99,6 +99,10 @@ public interface UrlMatcher {
             if (!methodMatch(originalRequest, bean)) {
                 return false;
             }
+            //不包含切割符号，则直接匹配为错误
+            if (!bean.getUrl().contains(splitter) ) {
+                return false;
+            }
             String path = originalRequest.url().url().getPath().split(splitter)[1];
             String beanUrl = bean.getUrl().split(splitter)[1];
             return path.equalsIgnoreCase(beanUrl);

@@ -51,7 +51,11 @@ public class MockDataPresenter extends BaseMockPresenter<MockDataContract.View> 
                     public void accept(List<MocksResponse> mocksResponses) throws Exception {
                         List<String> searchList = new ArrayList<>(mocksResponses.size());
                         for (MocksResponse mocksResponse : mocksResponses){
-                            String temp = mocksResponse.getUrl().split(MockRemote.get().getSplitter())[1];
+                            String temp = mocksResponse.getUrl();
+                            //只截取需要区分的部分
+                            if (mocksResponse.getUrl().contains(MockRemote.get().getSplitter())){
+                                temp = mocksResponse.getUrl().split(MockRemote.get().getSplitter())[1];
+                            }
                             searchList.add(temp+"method:"+mocksResponse.getMethod());
                         }
                         view.initSearchBar(searchList);
