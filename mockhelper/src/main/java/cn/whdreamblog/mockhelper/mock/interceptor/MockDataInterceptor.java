@@ -41,6 +41,7 @@ public class MockDataInterceptor implements Interceptor {
                         .tag(originalRequest.tag())
                         .url(baseUrl+bean.getUrl()+queryString)
                         .build();
+                // TODO: 2020/5/31 改假数据需要研究 mockOkHttp.....
                 Response response = MockRemote.getClient().newCall(mockRequest).execute();
                 response.header("mock","isMock");
                 return response;
