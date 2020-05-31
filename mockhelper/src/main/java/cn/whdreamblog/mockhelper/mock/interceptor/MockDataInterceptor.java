@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.whdreamblog.mockhelper.EasyMockHelperApplication;
 import cn.whdreamblog.mockhelper.data.MockRemote;
 import cn.whdreamblog.mockhelper.data.model.MocksResponse;
 import cn.whdreamblog.mockhelper.util.MockUtils;
@@ -20,7 +21,6 @@ import okhttp3.Response;
  * desc : 用于转发mock数据
  */
 public class MockDataInterceptor implements Interceptor {
-    public static final String API = "api";
     private final String baseUrl = MockRemote.projectBaseUrl;
     @Override
     public Response intercept(Chain chain) throws IOException {
@@ -58,11 +58,6 @@ public class MockDataInterceptor implements Interceptor {
     }
 
     private boolean isUrlEquals( Request originalRequest,MocksResponse bean){
-        if (!originalRequest.method().equalsIgnoreCase(bean.getMethod())){
-            return false;
-        }
-        String path = originalRequest.url().url().getPath().split(API)[1];
-        String beanUrl = bean.getUrl().split(API)[1];
-        return path.equalsIgnoreCase(beanUrl);
+       return EasyMockHelperApplication.get().getUrlMatcher().isUrlEquals(originalRequest, bean);
     }
 }

@@ -22,7 +22,7 @@ public interface WeatherContract {
          * 展示
          * @param weatherInfo json
          */
-        void showWeatherInfo(String weatherInfo);
+        void showInfo(String weatherInfo);
     }
 
     interface Presenter {
@@ -32,8 +32,15 @@ public interface WeatherContract {
         void start();
 
         /**
+         * 获取生活指数
+         */
+        void getSuggestion();
+
+        /**
          * 解绑定
          */
         void unSubscribe();
+
+        void setCurrentCity(String city);
     }
 }

@@ -63,7 +63,7 @@ public interface UrlMatcher {
         }
         @Override
         public boolean isUrlEquals(Request originalRequest, MocksResponse bean) {
-            if (methodMatch(originalRequest, bean)) {
+            if (!methodMatch(originalRequest, bean)) {
                 return false;
             }
 
@@ -96,7 +96,7 @@ public interface UrlMatcher {
         }
         @Override
         public boolean isUrlEquals(Request originalRequest, MocksResponse bean) {
-            if (methodMatch(originalRequest, bean)) {
+            if (!methodMatch(originalRequest, bean)) {
                 return false;
             }
             String path = originalRequest.url().url().getPath().split(splitter)[1];

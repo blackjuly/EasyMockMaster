@@ -47,6 +47,7 @@ public class EasyMockHelperApplication {
         Objects.requireNonNull(baseUrl);
         Objects.requireNonNull(projectId);
         Objects.requireNonNull(projectBaseUrl);
+        Objects.requireNonNull(matcher);
         if (!baseUrl.toLowerCase().startsWith(HTTP_STRING)){
             throw new IllegalArgumentException("");
         }

@@ -95,6 +95,7 @@ public class MockRemote {
         ){
             return;
         }
+        // TODO: 2020/5/31 目前这种策略只适合， xxx/api/sss  中间有相同分隔符的url
         String[] parts = url.split(get().splitter);
         if (parts.length < 2){
             return;

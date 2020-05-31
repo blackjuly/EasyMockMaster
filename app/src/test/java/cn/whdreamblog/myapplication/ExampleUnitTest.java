@@ -12,14 +12,14 @@ import cn.whdreamblog.myapplication.data.NewWorkManger;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
+       boolean a =  "GET".equalsIgnoreCase("get");
+        System.out.println(a);
         NewWorkManger demo = new NewWorkManger();
         try {
+            String url1 = demo.generateGetSuggestionURL("beijing");
+            System.out.println("alarmUrl:"+url1);
             String url = demo.generateGetDiaryWeatherURL(
-                    "shanghai",
-                    "zh-Hans",
-                    "c",
-                    "1",
-                    "1"
+                    "shanghai"
             );
             System.out.println("URL:" + url);
         } catch (Exception e) {

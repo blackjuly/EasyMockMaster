@@ -1,10 +1,7 @@
 package cn.whdreamblog.myapplication.data;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.security.SignatureException;
-import java.util.Date;
 import java.util.function.Consumer;
 
 import javax.crypto.Mac;
@@ -45,7 +42,9 @@ public class NewWorkManger {
     public static NewWorkManger get(){
         return manger;
     }
-    private String TIANQI_DAILY_WEATHER_URL = "https://api.seniverse.com/v3/weather/daily.json";
+    private String TIANQI_DAILY_WEATHER_URL = "https://api.seniverse.com/v3/weather/now.json";
+
+    private String SUGGESTION_URL = "https://api.seniverse.com/v3/life/suggestion.json";
 
     private String TIANQI_API_SECRET_KEY = "ST-8-qfa3D9uRDJZ9"; //
 
@@ -75,13 +74,9 @@ public class NewWorkManger {
         }
         return result;
     }
-    public String getDiaryWeatherInfo() throws IOException, SignatureException {
+    public String getDiaryWeatherInfo(String city) throws IOException, SignatureException {
         String url = generateGetDiaryWeatherURL(
-                "shanghai",
-                "zh-Hans",
-                "c",
-                "1",
-                "1"
+                city
         );
         Request request = new Request.Builder().url(url).get().build();
         final Call call = okHttpClient.newCall(request);
@@ -89,26 +84,31 @@ public class NewWorkManger {
         System.out.println(response.toString());
        return response.body().string();
     }
+
     /**
-     * Generate the URL to get diary weather
-     * @param location
-     * @param language
-     * @param unit
-     * @param start
-     * @param days
-     * @return
+     *
+     * @return 获取生活指数
+     */
+    public String getSuggestion(String city) throws IOException {
+        String url = generateGetSuggestionURL(city);
+        Request request = new Request.Builder().url(url).get().build();
+        final Call call = okHttpClient.newCall(request);
+        Response response = call.execute();
+        System.out.println(response.toString());
+        return response.body().string();
+    }
+    /**
      */
     public String generateGetDiaryWeatherURL(
-            String location,
-            String language,
-            String unit,
-            String start,
-            String days
-    )  throws SignatureException, UnsupportedEncodingException {
-        String timestamp = String.valueOf(new Date().getTime());
-        String params = "ts=" + timestamp + "&ttl=1800&uid=" + TIANQI_API_USER_ID;
-        String signature = URLEncoder.encode(generateSignature(params, TIANQI_API_SECRET_KEY), "UTF-8");
-        return TIANQI_DAILY_WEATHER_URL + "?" + params + "&sig=" + signature + "&location=" + location + "&language=" + language + "&unit=" + unit + "&start=" + start + "&days=" + days;
+            String location
+    )  throws SignatureException {
+        return TIANQI_DAILY_WEATHER_URL +  "?key=" + TIANQI_API_SECRET_KEY + "&location=" + location+"&language=zh-Hans";
+    }
+
+    public String generateGetSuggestionURL(
+            String location
+    )  {
+        return SUGGESTION_URL + "?key=" + TIANQI_API_SECRET_KEY + "&location=" + location+"&language=zh-Hans";
     }
 
 

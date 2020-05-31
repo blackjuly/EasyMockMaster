@@ -50,7 +50,10 @@ public class MockRecordActivity extends BaseActivity<MockRecordContract.Presente
     Button btnUpdateMock;
 
     Switch switchRecord;
+
     View view;
+
+    Context context;
     private DevMockRecordAdapter adapter;
 
     public static void start(Activity activity) {
@@ -70,7 +73,7 @@ public class MockRecordActivity extends BaseActivity<MockRecordContract.Presente
         btnUpdateMock = findViewById(R.id.btn_update_mock);
         switchRecord = findViewById(R.id.switch_record);
         view = findViewById(R.id.content);
-
+        this.context = this;
         initViews();
         new MockRecordPresenter(this);
         presenter.start();
@@ -90,15 +93,22 @@ public class MockRecordActivity extends BaseActivity<MockRecordContract.Presente
                 if (adapter == null|| adapter.selectList.isEmpty()){
                     return;
                 }
-               new AlertDialog.Builder(getBaseContext())
-                       .setCancelable(false)
-                       .setMessage("确定更新选中的接口")
-                       .setNegativeButton("确定", new DialogInterface.OnClickListener() {
-                           @Override
-                           public void onClick(DialogInterface dialog, int which) {
-                               presenter.updateRecords(adapter.selectList);
-                           }
-                       }).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(context)
+                        .setCancelable(false)
+                        .setMessage("确定更新选中的接口")
+                        .setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                presenter.updateRecords(adapter.selectList);
+                            }
+                        }).setPositiveButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                               dialog.dismiss();
+                            }
+                        })
+                        .create();
+                alertDialog.show();
 //                dialogFactory.showConfirmDialog(
 //                        "确定更新选中的接口"
 //                        , "确定"
