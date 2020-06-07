@@ -90,4 +90,4 @@ public class SomeNetworkClass {
 具体mock功能详细使用，请看wiki！
 
 ## 示例效果图
-[singlemock](singlemock.gif)
+![singlemock](singlemock.gif)
