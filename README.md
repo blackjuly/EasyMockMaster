@@ -1,5 +1,9 @@
 # EasyMockMaster
 方便大家可以在app上使用大搜车的[easymock](https://github.com/easy-mock/easy-mock/blob/dev/README.zh-CN.md)，提供部分接口mock，以及真实数据录制功能
+
+## 示例效果图
+![singlemock](singlemock.gif)
+
 ## 背景
 
 在前端和移动端的开发中，造数据一直是一个非常苦恼的事情，麻烦后端也并不是一个长久之计，为了解决这个问题，在开源环境下产生了大量的mock平台，支持利用moc.js语法随机生成各种mock数据
@@ -89,5 +93,4 @@ public class SomeNetworkClass {
 
 具体mock功能详细使用，请看wiki！
 
-## 示例效果图
-![singlemock](singlemock.gif)
+
