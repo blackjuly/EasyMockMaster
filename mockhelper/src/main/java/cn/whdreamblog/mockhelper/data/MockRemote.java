@@ -64,6 +64,8 @@ public class MockRemote {
         Objects.requireNonNull(context);
         this.context = context;
         this.splitter = context.getUrlMatcher().splitter();
+        //初始化网络请求类
+        ServiceFactory.init();
     }
 
     public static void init(EasyMockHelperApplication context){

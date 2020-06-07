@@ -14,17 +14,26 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceFactory {
     private Retrofit retrofit = null;
     private OkHttpClient okHttpClient = null;
+    private static ServiceFactory serviceFactory;
 
-    private static class RetrofitClientHolder {
-        public static ServiceFactory retrofitClient = new ServiceFactory();
+    private ServiceFactory() {
+        initRetrofit();
     }
-
+    public static void init(){
+        serviceFactory = new ServiceFactory();
+    }
     public static ServiceFactory getInstance() {
-        return RetrofitClientHolder.retrofitClient;
+        if (serviceFactory == null){
+           throw new RuntimeException("u must first call init");
+        }
+        return serviceFactory;
     }
 
 
     public Retrofit getRetrofit() {
+        return retrofit;
+    }
+    private void initRetrofit(){
         if (retrofit == null) {
             if (okHttpClient == null) {
                 initOkHttp();
@@ -35,10 +44,7 @@ public class ServiceFactory {
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
         }
-
-        return retrofit;
     }
-
     private void initOkHttp() {
         if (okHttpClient != null){
             return;
