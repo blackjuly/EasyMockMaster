@@ -88,3 +88,6 @@ public class SomeNetworkClass {
 5.OK，可以开始享受你的mock生活啦~~
 
 具体mock功能详细使用，请看wiki！
+
+## 示例效果图
+[singlemock](singlemock.gif)

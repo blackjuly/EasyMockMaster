@@ -1,8 +1,12 @@
 package cn.whdreamblog.mockhelper.data.model;
 
+import android.text.TextUtils;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+
+import cn.whdreamblog.mockhelper.EasyMockHelperApplication;
 
 /**
  * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
@@ -85,8 +89,9 @@ public class MocksResponse implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
 
         MocksResponse that = (MocksResponse) o;
-
-        if (!url.equalsIgnoreCase(that.url)) return false;
+        if (!getUrlWithoutSplitter().equalsIgnoreCase(that.getUrlWithoutSplitter())) {
+            return false;
+        }
         return method.equalsIgnoreCase(that.method);
     }
 
@@ -95,7 +100,20 @@ public class MocksResponse implements Serializable {
     public int hashCode() {
         return url.hashCode()+ method.toUpperCase().hashCode();
     }
-
+    public String getUrlWithoutSplitter(){
+        String s = EasyMockHelperApplication.get().getUrlMatcher().splitter();
+        if (TextUtils.isEmpty(s) || TextUtils.isEmpty(url)){
+            return url;
+        }
+        if (!url.contains(s)){
+            return url;
+        }
+        if (url.endsWith(s)){
+            throw new RuntimeException("url is invalid! :"+url);
+        }
+        final String placeHolder = "holder";
+        return placeHolder.concat(url).split(s)[1];
+    }
     @Override
     public String toString() {
         return "url='" + url + '\'' +
