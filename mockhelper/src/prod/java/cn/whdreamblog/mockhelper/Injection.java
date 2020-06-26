@@ -24,7 +24,7 @@ import cn.whdreamblog.mockhelper.data.MockService;
 import cn.whdreamblog.mockhelper.data.ServiceFactory;
 import cn.whdreamblog.mockhelper.schedulers.BaseSchedulerProvider;
 import cn.whdreamblog.mockhelper.schedulers.SchedulerProvider;
-
+import okhttp3.Call;
 
 /**
  * Enables injection of production implementations for
@@ -43,5 +43,8 @@ public class Injection {
         return SchedulerProvider.getInstance();
     }
 
-
+    @NonNull
+    public static Call.Factory getCallFactory(){
+        return ServiceFactory.getInstance().getOkHttpClient();
+    }
 }

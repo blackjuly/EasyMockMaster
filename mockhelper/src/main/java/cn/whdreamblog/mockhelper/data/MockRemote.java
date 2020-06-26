@@ -9,9 +9,10 @@ import java.util.Objects;
 import java.util.Set;
 
 import cn.whdreamblog.mockhelper.EasyMockHelperApplication;
-import cn.whdreamblog.mockhelper.util.MockInitHelper;
+import cn.whdreamblog.mockhelper.Injection;
 import cn.whdreamblog.mockhelper.data.model.MocksResponse;
-import okhttp3.OkHttpClient;
+import cn.whdreamblog.mockhelper.util.MockInitHelper;
+import okhttp3.Call;
 
 /**
  * @author blackjuly wanghao <a href="blackjuly@outlook.com">Contact me.</a>
@@ -152,8 +153,8 @@ public class MockRemote {
         }
         mockPrefix = parts[0].concat(get().splitter);
     }
-    public static OkHttpClient getClient(){
-        return ServiceFactory.getInstance().getOkHttpClient();
+    public static Call.Factory getClient(){
+        return Injection.getCallFactory();
     }
 
     public static boolean isOpenMockRecord() {
