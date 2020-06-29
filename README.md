@@ -7,7 +7,7 @@
 ## 本地假数据示例版
 
 为了方便小伙伴快速看到当前类库的一个效果，笔者实现了一个不需要后台的本地mock版本的app，直接安装即可体验效果
-[local-mock-app.apk](app-mock-debug.apk)
+[local-mock-app.apk](https://raw.githubusercontent.com/blackjuly/EasyMockMaster/master/app-mock-debug.apk)
 
 ## 背景
 
