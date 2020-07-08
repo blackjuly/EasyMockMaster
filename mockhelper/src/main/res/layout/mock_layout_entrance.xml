@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/suspend_content"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mock_suspend_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00FFFFFF"
     android:fitsSystemWindows="true">
 
     <cn.whdreamblog.mockhelper.widget.ToolsTextView
-        android:id="@+id/tv_develop"
+        android:id="@+id/mock_tv_develop"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:gravity="center"
         android:padding="10dp"
         android:text="Mock"
         android:textColor="#FFFFFF"
         android:textSize="11dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -33,7 +33,7 @@ public class DevelopToolWindow {
 
 
     public static boolean canInsertToolsView(final Activity activity) {
-        return activity.getWindow().getDecorView().findViewById(R.id.suspend_content) == null;
+        return activity.getWindow().getDecorView().findViewById(R.id.mock_suspend_content) == null;
     }
 
     /**
@@ -68,7 +68,7 @@ public class DevelopToolWindow {
 
         final boolean[] flags = new boolean[1];
 
-        final ToolsTextView tvDevelop = suspendContent.findViewById(R.id.tv_develop);
+        final ToolsTextView tvDevelop = suspendContent.findViewById(R.id.mock_tv_develop);
 
         tvDevelop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,12 +157,12 @@ public class DevelopToolWindow {
             return;
         }
 
-        View toolsView = act.getWindow().getDecorView().findViewById(R.id.suspend_content);
+        View toolsView = act.getWindow().getDecorView().findViewById(R.id.mock_suspend_content);
         if (toolsView == null) {
             return;
         }
 
-        ToolsTextView tvDevelop = toolsView.findViewById(R.id.tv_develop);
+        ToolsTextView tvDevelop = toolsView.findViewById(R.id.mock_tv_develop);
 
         if (MockUtils.isToolsAbled()) {
             tvDevelop.setAlpha(1f);

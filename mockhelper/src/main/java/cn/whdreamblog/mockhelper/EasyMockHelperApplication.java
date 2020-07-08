@@ -49,7 +49,7 @@ public class EasyMockHelperApplication {
         Objects.requireNonNull(projectBaseUrl);
         Objects.requireNonNull(matcher);
         if (!baseUrl.toLowerCase().startsWith(HTTP_STRING)){
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("baseUrl必须是以http开头，类似 http://ip:7300/");
         }
         MockRemote.BASE_IP = baseUrl;
         MockRemote.userId = userName;
