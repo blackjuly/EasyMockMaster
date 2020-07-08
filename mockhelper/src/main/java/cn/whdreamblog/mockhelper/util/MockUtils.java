@@ -65,36 +65,6 @@ public class MockUtils {
         MockSPUtil.get().putString(MockRemote.SELECT_MOCK_LIST_TAG, GsonUtil.toJson(MockRemote.getSelectDataSet()));
     }
 
-    public static void reopenLogger() {
-        MyLogger.getLogger().init(true);
-    }
 
 
-    public static final String format(@NonNull SimpleDateFormat format, @NonNull String time) {
-
-
-        Date date = parse(time);
-
-        if (date == null || format == null) {
-            return null;
-        }
-
-        return format.format(date);
-
-    }
-
-
-    public static final Date parse(@NonNull String time) {
-
-        if (time == null) return null;
-
-        try {
-            time = time.replace("T", " ");
-            Date date = FORMAT1.parse(time);
-            return date;
-        } catch (Exception e) {
-            return null;
-        }
-
-    }
 }

@@ -59,7 +59,7 @@ public class BasePresenterImp<T extends BaseView> implements BasePresenter {
      * @return 返回一个值表示是否已经处理了
      */
     public final boolean normalErrorSolve(@NonNull Throwable t) {
-        myLogger.e(t);
+        myLogger.e(t,"mock请求发生错误");
        if (ErrorUtil.isNetWorkError(t)) {
             view.tip("网络异常,请检查您的网络 \n error : " + t.getMessage(), BaseViewSupport.TipEnum.Error);
             return true;

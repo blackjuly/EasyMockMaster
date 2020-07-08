@@ -25,6 +25,7 @@ public class DemoApplication extends Application {
                 // 传入url的通用的分隔符
                 , new UrlMatcher.SplitterUrlMatcher("v3")
         );
+        EasyMockHelperApplication.logOutPut(true);
         NewWorkManger.init();
     }
 }

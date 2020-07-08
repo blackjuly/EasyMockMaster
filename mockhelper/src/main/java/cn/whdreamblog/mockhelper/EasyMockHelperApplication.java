@@ -7,6 +7,7 @@ import java.util.Objects;
 import cn.whdreamblog.mockhelper.data.MockRemote;
 import cn.whdreamblog.mockhelper.mock.interceptor.UrlMatcher;
 import cn.whdreamblog.mockhelper.util.MockInitHelper;
+import cn.whdreamblog.mockhelper.util.MyLogger;
 
 /**
  * @author wanghao <a href="blackJuly@outlook.com">Contact me.</a>
@@ -26,8 +27,8 @@ public class EasyMockHelperApplication {
         this.urlMatcher = matcher;
     }
     public static void init(Application application, String userName, String password, String baseUrl
-            , String projectId, String projectBaseUrl){
-        init(application, userName, password, baseUrl, projectId, projectBaseUrl,UrlMatcher.defaultMatcher);
+            , String projectId, String projectBaseUrl,String splitter){
+        init(application, userName, password, baseUrl, projectId, projectBaseUrl,new UrlMatcher.SplitterUrlMatcher(splitter));
     }
     /**
      *
@@ -70,5 +71,20 @@ public class EasyMockHelperApplication {
 
     public UrlMatcher getUrlMatcher() {
         return urlMatcher;
+    }
+
+    /**
+     * 开启日志打印
+     * @param localPrint true 打印日志
+     */
+    public static  void logOutPut(boolean localPrint){
+        EasyMockHelperApplication.get().setLocalPrint(localPrint);
+    }
+    /**
+     * 开启日志打印
+     * @param localPrint 日志打印
+     */
+    private void setLocalPrint(boolean localPrint) {
+        MyLogger.getLogger().init(localPrint);
     }
 }
