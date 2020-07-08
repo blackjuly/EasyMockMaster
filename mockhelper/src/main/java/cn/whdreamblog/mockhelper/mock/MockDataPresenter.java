@@ -46,7 +46,9 @@ public class MockDataPresenter extends BaseMockPresenter<MockDataContract.View> 
                             return responses;
                         }
                     }
-                }).doOnNext(new Consumer<List<MocksResponse>>() {
+                })
+                        .observeOn(schedulerProvider.ui())
+                        .doOnNext(new Consumer<List<MocksResponse>>() {
                     @Override
                     public void accept(List<MocksResponse> mocksResponses) throws Exception {
                         List<String> searchList = new ArrayList<>(mocksResponses.size());
@@ -58,6 +60,7 @@ public class MockDataPresenter extends BaseMockPresenter<MockDataContract.View> 
                             }
                             searchList.add(temp+"method:"+mocksResponse.getMethod());
                         }
+                        myLogger.dByAndroidLog("currentThread"+Thread.currentThread().getName());
                         view.initSearchBar(searchList);
                     }
                 })
