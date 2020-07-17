@@ -58,13 +58,19 @@ class DemoApplication {
     public static  String userId = "用户名";
     public static String password = "密码";
     public static  String mockDataProjectId = "工程id";
-
+    public static  String projectBaseUrl = "工程baseUrl";	
      @Override
     public void onCreate() {
-        //初始化，正式版可以不进行初始化；直接看不到节目的存在
-         EasyMockHelperApplication.init(this,userId,password,baseIp,mockDataProjectId
-            //添加 url的匹配规则，分隔符规则详情看wiki
-            , new UrlMatcher.SplitterUrlMatcher("v3")     );
+        //初始化，正式版可以通过if判断控制不初始化
+         EasyMockHelperApplication.init(
+                this
+		,userId
+                ,userId
+                ,baseIp //示例：http://192.168.5.79:7300/
+                ,mockDataProjectId //示例：5ef05742d55d4900203eb5d5
+                ,projectBaseUrl //http://192.168.5.79:7300/mock/5ef05742d55d4900203eb5d5/xxxxdemo
+                //添加 url的匹配规则，分隔符规则详情看wiki
+                , new UrlMatcher.SplitterUrlMatcher("xxxxdemo") );//主要就是上面工程url的最后一段
     }
 }
 ```
