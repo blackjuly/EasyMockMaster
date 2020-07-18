@@ -47,7 +47,7 @@ allprojects {
 ```groovy
 dependencies {
         //记得版本号改为最新 
-	     implementation 'com.github.blackjuly:EasyMockMaster:0.0.8'
+	    implementation 'com.github.blackjuly:EasyMockMaster:0.1.1'
 	}
 ```
 3.在你的app的application文件中，初始化 
